@@ -1,0 +1,43 @@
+# Description
+
+	Obstacle detection or tracking moving objects is one of the most interesting topics in computer vision. 
+	This problem could be solved in two steps:
+  
+	1, Detecting moving objects in each frame
+	2, Tracking historical objects with some tracking algorithms
+  
+	An assignment problem is used to associate the objects detected by detectors and tracked by trackers.
+  
+	We can found some introduction of this framework here,
+	https://towardsdatascience.com/computer-vision-for-tracking-8220759eee85
+  
+	Another example in more detail with matlab code (detecors and trackers may different),
+	https://www.mathworks.com/help/vision/examples/motion-based-multiple-object-tracking.html
+
+	Here I implemented a highly efficient and scalable C++ framework to combine the state of art 
+	deep-learning based detectors (Yolo3 demoed here) and correlation filters based trackers 
+	(KCF, Kalman Filters also implemented). The assignment problem is solved by hungarian algorithm.
+  
+# Detectors: Yolo3 
+
+	Yolo3 is trained for detecting bottles, cans and hands in this demo. It is trained with Keras 
+	and compiled with tensorflow C++ into a DLL. (YOLO3.DLL under bin folder). CUDA 9.2 is used to
+	compile the tensorflow C++ library. 
+
+	YOLO3.DLL can be compiled with the code under folder detectors and tensorflow C++ library if 
+	you have tensorflow C++ library compiled.
+
+# Trackers: Kalman Filter and KCF
+
+	Kalman filter is fast but less accurate. KCF is accurate but much slower. 
+	They are implemnted with exactly same interface, so we can easily switch from one to another 
+	in the project.
+
+# Live Camera Capture: OpenCV
+
+	OpenCV is used to capture live video frames and used for image preprocessing.
+
+# Misc
+
+	YOLO3.DLL and the model file are too big. They can be downloaded from following link:
+	https://pan.baidu.com/s/1CPYU2o59vutoq-OJewObRw

@@ -1,0 +1,4 @@
+.vscode/
+build/
+videos/project_track_and_detect.avi
+model/yolov3.weights
