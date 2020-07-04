@@ -87,7 +87,7 @@ Tracked 1240 frames
 Tracked 1250 frames
 Written 1253 frames
 -------  Done !!  -------
-
+```
 7. The video can be played from (`videos/project_track_and_detect.avi`) after the program terminates
 
 ## Code Instructions
