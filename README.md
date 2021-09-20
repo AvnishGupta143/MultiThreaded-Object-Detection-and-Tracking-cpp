@@ -96,7 +96,7 @@ Written 1253 frames
 2. Change the input and output video file path in main.cpp
 2. Turn the track flag to false in main.cpp if you want to run detection only
 
-## Satisfied Rubric Points
+## Key Rubric Points
 
 ### The application reads data from a file and process the data.
 
